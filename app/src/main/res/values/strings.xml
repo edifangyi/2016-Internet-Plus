@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Internet_Plus</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_title_1">钱包</string>
+    <string name="navigation_drawer_title_2">订单</string>
+    <string name="navigation_drawer_title_3">消息</string>
+    <string name="navigation_drawer_title_4">联系人</string>
+    <string name="navigation_drawer_title_5">个人动态</string>
+    <string name="navigation_drawer_title_6">设置</string>
+
+    <string name="user_name">Android</string>
+    <string name="user_information">AndroidStudio@gmail.com</string>
+
+    <string name="toolbar_location">北京</string>
+    <string name="toolbar_search_text">请输入校区、商圈或景区</string>
+
+    <string name="navigation_bar_title_1">首页</string>
+    <string name="navigation_bar_title_2">同伴</string>
+    <string name="navigation_bar_title_3">逛逛</string>
+    <string name="navigation_bar_title_4">世界</string>
+
+
+
+
+</resources>
