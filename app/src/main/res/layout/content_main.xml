@@ -1,25 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.fangyi.internet_plus.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <WebView
-        android:layout_marginTop="4dp"
-        android:id="@+id/webview"
-        android:layout_above="@id/bottom"
+    <!--<WebView-->
+    <!--android:layout_marginTop="4dp"-->
+    <!--android:id="@+id/webview"-->
+    <!--android:layout_above="@id/bottom"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--</WebView>-->
+
+    <!--<include-->
+    <!--android:id="@+id/bottom"-->
+    <!--layout="@layout/nav_bottom_main"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true" />-->
+
+    <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    </WebView>
+    </android.support.v4.view.ViewPager>
 
-    <include
-        android:id="@+id/bottom"
-        layout="@layout/nav_bottom_main"
+    <RadioGroup
+        android:id="@+id/rg_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
-</RelativeLayout>
+        android:background="@color/colorAccent"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/ic_menu_apollo_off"
+            android:gravity="center"
+            android:text="1" />
+
+        <RadioButton
+            android:id="@+id/rb_home2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/ic_menu_apollo_off"
+            android:gravity="center"
+            android:text="1" />
+
+        <RadioButton
+            android:id="@+id/rb_home3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/ic_menu_apollo_off"
+            android:gravity="center"
+            android:text="1" />
+
+        <RadioButton
+            android:id="@+id/rb_home4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/ic_menu_apollo_off"
+            android:gravity="center"
+            android:text="1" />
+
+
+    </RadioGroup>
+
+</LinearLayout>

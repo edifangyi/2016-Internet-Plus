@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="31dp"
                 android:layout_margin="8dp"
-                android:background="@drawable/search_shape">
+                android:background="#ff00">
 
                 <ImageView
                     android:id="@+id/iv_search_magnifier"
@@ -32,7 +32,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
-                    android:src="@mipmap/search_magnifier" />
+                    android:src="@mipmap/ic_menu_life_circle_off" />
 
 
                 <TextView

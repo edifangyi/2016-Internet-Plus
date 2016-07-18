@@ -7,15 +7,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
@@ -36,12 +31,6 @@ public class MainActivity extends AppCompatActivity
                     case R.id.share:
                         Toast.makeText(MainActivity.this,"坐标",Toast.LENGTH_SHORT).show();
                         break;
-//                    case R.id.setting:
-//                        Toast.makeText(MainActivity.this,"设置",Toast.LENGTH_SHORT).show();
-//                        break;
-//                    case R.id.action_settings:
-//                        Toast.makeText(MainActivity.this,"action_settings",Toast.LENGTH_SHORT).show();
-//                        break;
                 }
                 return false;
             }
@@ -69,90 +58,25 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        assignViews();
-        webView();
-    }
-
-    /**
-     * 设置webView
-     */
-    String url = "http://i.meituan.com/?cevent=imt%2Fguide%2Fi%2FAndroid";
-    private WebView webView;
-
-    private void webView() {
-        webView = (WebView) findViewById(R.id.webview);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl(url);
-        webView.setWebViewClient(new WebViewClient(){
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
-            }
-        });
-        webView.setWebChromeClient(new WebChromeClient(){
-            @Override
-            public void onProgressChanged(WebView view, int newProgress) {
-                //get the newProgress and refresh progress bar
-            }
-        });
-        webView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                return true;
-            }
-        });
-
-        webView.setOnKeyListener(new View.OnKeyListener() {
-
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (event.getAction() == KeyEvent.ACTION_DOWN) {
-                    if (keyCode == KeyEvent.KEYCODE_BACK && webView.canGoBack()) {  //表示按返回键 时的操作
-                        webView.goBack();   //后退
-                        return true;    //已处理
-                    }
-                }
-                return false;
-            }
-        });
-    }
-
-
-    private LinearLayout idBottomBt1;
-    private LinearLayout idBottomBt2;
-    private LinearLayout idBottomBt3;
-    private LinearLayout idBottomBt4;
-
-    private void assignViews() {
-
-        idBottomBt1 = (LinearLayout) findViewById(R.id.id_bottom_bt_1);
-        idBottomBt2 = (LinearLayout) findViewById(R.id.id_bottom_bt_2);
-        idBottomBt3 = (LinearLayout) findViewById(R.id.id_bottom_bt_3);
-        idBottomBt4 = (LinearLayout) findViewById(R.id.id_bottom_bt_4);
-
-        idBottomBt1.setOnClickListener(this);
-        idBottomBt2.setOnClickListener(this);
-        idBottomBt3.setOnClickListener(this);
-        idBottomBt4.setOnClickListener(this);
+//        webView();
     }
 
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.id_bottom_bt_1:
-                Toast.makeText(this, "首页", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.id_bottom_bt_2:
-                Toast.makeText(this, "同伴", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.id_bottom_bt_3:
-                Toast.makeText(this, "导游", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.id_bottom_bt_4:
-                Toast.makeText(this, "世界", Toast.LENGTH_SHORT).show();
-                break;
+//            case R.id.id_bottom_bt_1:
+//                Toast.makeText(this, "首页", Toast.LENGTH_SHORT).show();
+//                break;
+//            case R.id.id_bottom_bt_2:
+//                Toast.makeText(this, "同伴", Toast.LENGTH_SHORT).show();
+//                break;
+//            case R.id.id_bottom_bt_3:
+//                Toast.makeText(this, "导游", Toast.LENGTH_SHORT).show();
+//                break;
+//            case R.id.id_bottom_bt_4:
+//                Toast.makeText(this, "世界", Toast.LENGTH_SHORT).show();
+//                break;
         }
     }
 
